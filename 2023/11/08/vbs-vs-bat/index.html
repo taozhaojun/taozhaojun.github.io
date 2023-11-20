@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"taozhaojun.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="This is a brief comparison of .VBS and .BAT Files">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding .VBS and .BAT Files">
+<meta property="og:url" content="https://taozhaojun.github.io/2023/11/08/vbs-vs-bat/index.html">
+<meta property="og:site_name" content="Zhaojun&#39;s Blog">
+<meta property="og:description" content="This is a brief comparison of .VBS and .BAT Files">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-09T04:29:34.000Z">
+<meta property="article:modified_time" content="2023-11-20T15:53:56.208Z">
+<meta property="article:author" content="Zhaojun TAO">
+<meta property="article:tag" content="coding">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://taozhaojun.github.io/2023/11/08/vbs-vs-bat/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://taozhaojun.github.io/2023/11/08/vbs-vs-bat/","path":"2023/11/08/vbs-vs-bat/","title":"Understanding .VBS and .BAT Files"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Understanding .VBS and .BAT Files | Zhaojun's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Zhaojun's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">A blog about computer science and life</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#VBS-Files"><span class="nav-number">1.</span> <span class="nav-text">.VBS Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BAT-Files"><span class="nav-number">2.</span> <span class="nav-text">.BAT Files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Differences-Between-VBS-and-BAT-Files"><span class="nav-number">3.</span> <span class="nav-text">Differences Between .VBS and .BAT Files</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Zhaojun TAO</p>
+  <div class="site-description" itemprop="description">Like coding, like life.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://taozhaojun.github.io/2023/11/08/vbs-vs-bat/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zhaojun TAO">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zhaojun's Blog">
+      <meta itemprop="description" content="Like coding, like life.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Understanding .VBS and .BAT Files | Zhaojun's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Understanding .VBS and .BAT Files
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-11-08 23:29:34" itemprop="dateCreated datePublished" datetime="2023-11-08T23:29:34-05:00">2023-11-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2023-11-20 10:53:56" itemprop="dateModified" datetime="2023-11-20T10:53:56-05:00">2023-11-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>This is a brief comparison of .VBS and .BAT Files</p>
+<span id="more"></span>
+
+<h2 id="VBS-Files"><a href="#VBS-Files" class="headerlink" title=".VBS Files"></a>.VBS Files</h2><ul>
+<li><strong>Extension</strong>: <code>.vbs</code></li>
+<li><strong>Full Name</strong>: Visual Basic Script</li>
+<li><strong>Description</strong>: A <code>.vbs</code> file is a script written in Visual Basic Scripting Edition (VBScript). VBScript is an Active Scripting language developed by Microsoft that is modeled on Visual Basic.</li>
+<li><strong>Usage</strong>: These scripts are primarily used for automating tasks in Windows. They can interact with the Windows Script Host (WSH) and can perform a wide range of functions, such as manipulating files and folders, editing the registry, and automating user interface actions.</li>
+<li><strong>Execution</strong>: <code>.vbs</code> files are executed using the WSH environment. They can be run by double-clicking the file or through the command line using the <code>cscript</code> or <code>wscript</code> commands.</li>
+</ul>
+<h2 id="BAT-Files"><a href="#BAT-Files" class="headerlink" title=".BAT Files"></a>.BAT Files</h2><ul>
+<li><strong>Extension</strong>: <code>.bat</code></li>
+<li><strong>Full Name</strong>: Batch File</li>
+<li><strong>Description</strong>: A <code>.bat</code> file is a batch script file in DOS, Windows, and OS&#x2F;2 operating systems. Batch files are used to automate repetitive command-line tasks.</li>
+<li><strong>Usage</strong>: They execute a series of commands in the Command Prompt and are very useful for simple scripting tasks. Batch files can perform operations like running programs, copying files, and managing system settings.</li>
+<li><strong>Execution</strong>: <code>.bat</code> files can be executed by double-clicking the file, which runs the script commands in a Command Prompt window, or they can be run from within the Command Prompt itself.</li>
+</ul>
+<h2 id="Differences-Between-VBS-and-BAT-Files"><a href="#Differences-Between-VBS-and-BAT-Files" class="headerlink" title="Differences Between .VBS and .BAT Files"></a>Differences Between .VBS and .BAT Files</h2><ul>
+<li><strong>Scripting Language</strong>: <code>.vbs</code> files use VBScript, which is a more advanced and versatile scripting language. <code>.bat</code> files consist of batch commands that are executed within the Command Prompt environment.</li>
+<li><strong>Functionality</strong>: VBScript has a broader range of functions and can interact with the system at a deeper level than batch scripts.</li>
+<li><strong>Ease of Use</strong>: Batch files are simpler to create and use for basic tasks, while VBScripts require a bit more programming knowledge.</li>
+<li><strong>Integration</strong>: VBScript can integrate with other scripts and applications more easily than batch scripts due to its support for COM (Component Object Model) automation.</li>
+<li><strong>Security</strong>: <code>.vbs</code> files can be potentially more harmful if used maliciously because they have access to more system commands and can create objects, so they should be used with caution.</li>
+<li><strong>Environment</strong>: <code>.bat</code> files are run in the Command Prompt environment, while <code>.vbs</code> files are run within the Windows Script Host.</li>
+</ul>
+<p><strong>Note</strong>: Both <code>.vbs</code> and <code>.bat</code> files should be used carefully, especially when downloaded from the internet, as they can contain harmful scripts.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/coding/" rel="tag"># coding</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/11/08/domain/" rel="prev" title="Local Account to Domain Account Transition Guide">
+                  <i class="fa fa-angle-left"></i> Local Account to Domain Account Transition Guide
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/11/08/RDP/" rel="next" title="Utiliser Deux Écrans avec le Protocole de Bureau à Distance (RDP)">
+                  Utiliser Deux Écrans avec le Protocole de Bureau à Distance (RDP) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zhaojun TAO</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
