@@ -19,28 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"taozhaojun.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="In a microservice architecture using Eureka for service discovery, services (clients) register themselves with the Eureka server. This allows them to discover each other and communicate.">
+    <meta name="description" content="This article explain the difference between mvc and mvvm.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Service Communication via Eureka Clients">
-<meta property="og:url" content="https://taozhaojun.github.io/2023/11/17/eureka/index.html">
+<meta property="og:title" content="MVC vs MVVM">
+<meta property="og:url" content="https://taozhaojun.github.io/2023/12/18/mvc-vs-mvvm/index.html">
 <meta property="og:site_name" content="Zhaojun&#39;s Blog">
-<meta property="og:description" content="In a microservice architecture using Eureka for service discovery, services (clients) register themselves with the Eureka server. This allows them to discover each other and communicate.">
+<meta property="og:description" content="This article explain the difference between mvc and mvvm.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-11-18T02:58:39.000Z">
-<meta property="article:modified_time" content="2023-11-20T15:53:56.177Z">
+<meta property="article:published_time" content="2023-12-18T13:48:29.000Z">
+<meta property="article:modified_time" content="2023-12-18T13:57:21.871Z">
 <meta property="article:author" content="Zhaojun TAO">
-<meta property="article:tag" content="spring">
+<meta property="article:tag" content="MVC, MVVM">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://taozhaojun.github.io/2023/11/17/eureka/">
+<link rel="canonical" href="https://taozhaojun.github.io/2023/12/18/mvc-vs-mvvm/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://taozhaojun.github.io/2023/11/17/eureka/","path":"2023/11/17/eureka/","title":"Service Communication via Eureka Clients"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://taozhaojun.github.io/2023/12/18/mvc-vs-mvvm/","path":"2023/12/18/mvc-vs-mvvm/","title":"MVC vs MVVM"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Service Communication via Eureka Clients | Zhaojun's Blog</title>
+<title>MVC vs MVVM | Zhaojun's Blog</title>
   
 
 
@@ -106,7 +106,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#How-It-Works"><span class="nav-number">1.</span> <span class="nav-text">How It Works</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-Code"><span class="nav-number">2.</span> <span class="nav-text">Example Code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">3.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC-Model-View-Controller"><span class="nav-number">1.</span> <span class="nav-text">MVC (Model-View-Controller)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example"><span class="nav-number">1.1.</span> <span class="nav-text">Example:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVVM-Model-View-ViewModel"><span class="nav-number">2.</span> <span class="nav-text">MVVM (Model-View-ViewModel)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-1"><span class="nav-number">2.1.</span> <span class="nav-text">Example:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Differences"><span class="nav-number">3.</span> <span class="nav-text">Differences:</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -151,7 +151,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://taozhaojun.github.io/2023/11/17/eureka/">
+    <link itemprop="mainEntityOfPage" href="https://taozhaojun.github.io/2023/12/18/mvc-vs-mvvm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,12 +164,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Service Communication via Eureka Clients | Zhaojun's Blog">
+      <meta itemprop="name" content="MVC vs MVVM | Zhaojun's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Service Communication via Eureka Clients
+          MVC vs MVVM
         </h1>
 
         <div class="post-meta-container">
@@ -179,15 +179,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2023-11-17 21:58:39" itemprop="dateCreated datePublished" datetime="2023-11-17T21:58:39-05:00">2023-11-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-11-20 10:53:56" itemprop="dateModified" datetime="2023-11-20T10:53:56-05:00">2023-11-20</time>
+      <time title="Created: 2023-12-18 08:48:29 / Modified: 08:57:21" itemprop="dateCreated datePublished" datetime="2023-12-18T08:48:29-05:00">2023-12-18</time>
     </span>
 
   
@@ -199,24 +193,37 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>In a microservice architecture using Eureka for service discovery, services (clients) register themselves with the Eureka server. This allows them to discover each other and communicate.</p>
+    <div class="post-body" itemprop="articleBody"><p>This article explain the difference between mvc and mvvm.</p>
 <span id="more"></span>
-
-<h2 id="How-It-Works"><a href="#How-It-Works" class="headerlink" title="How It Works"></a>How It Works</h2><ul>
-<li><p><strong>Service Registration</strong>: Each client service registers itself with the Eureka server at startup, providing metadata such as its hostname and port.</p>
-</li>
-<li><p><strong>Service Discovery</strong>: When a client needs to call another service, it queries the Eureka server for the available instances.</p>
-</li>
-<li><p><strong>Load Balancing</strong>: The client uses a load balancer like Ribbon to choose which instance to call.</p>
-</li>
-<li><p><strong>Service Call</strong>: The client uses a RestTemplate or a WebClient to make the HTTP call to the chosen service instance.</p>
-</li>
+<h2 id="MVC-Model-View-Controller"><a href="#MVC-Model-View-Controller" class="headerlink" title="MVC (Model-View-Controller)"></a>MVC (Model-View-Controller)</h2><p>MVC is a widely used design pattern, especially in web applications. It divides the application into three interconnected components:</p>
+<ul>
+<li><strong>Model</strong>: Represents the data and business logic of the application. Manages the data, logic, and rules of the application.</li>
+<li><strong>View</strong>: Represents the UI components. Displays data from the model to the user and sends user commands to the controller.</li>
+<li><strong>Controller</strong>: Acts as an interface between Model and View. Processes user input, makes changes in the Model.</li>
 </ul>
-<h2 id="Example-Code"><a href="#Example-Code" class="headerlink" title="Example Code"></a>Example Code</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.client.RestTemplate;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceAClient</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RestTemplate restTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">callServiceB</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// &#x27;service-b&#x27; is the application name of Service B registered with Eureka</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">serviceBUrl</span> <span class="operator">=</span> <span class="string">&quot;http://service-b/some-endpoint&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> restTemplate.getForObject(serviceBUrl, String.class);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>In this example, <code>service-b</code> is the application name used by Service B to register with Eureka.</p>
-<p>Remember to annotate your main application class with <code>@EnableDiscoveryClient</code> to enable discovery via Eureka.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Using Eureka server and clients is an effective way to allow services within a microservice architecture to discover and communicate with each other, providing a dynamic and resilient system.</p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><ul>
+<li><strong>Model</strong>: Server-side database table <code>Users</code> and related business logic.</li>
+<li><strong>View</strong>: HTML + CSS page displaying user data.</li>
+<li><strong>Controller</strong>: Server-side script handling HTTP requests, interacting with Model, passing data to View.</li>
+</ul>
+<h2 id="MVVM-Model-View-ViewModel"><a href="#MVVM-Model-View-ViewModel" class="headerlink" title="MVVM (Model-View-ViewModel)"></a>MVVM (Model-View-ViewModel)</h2><p>MVVM is primarily used in graphical user interfaces and introduces the ViewModel.</p>
+<ul>
+<li><strong>Model</strong>: Similar to MVC, it represents the data and the business logic.</li>
+<li><strong>View</strong>: Similar to MVC, represents the UI. The View is active; it updates itself if the ViewModel changes.</li>
+<li><strong>ViewModel</strong>: Serves as a middleman between the Model and the View. Transforms Model information into View-friendly data, implements properties, and commands for binding.</li>
+</ul>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example:"></a>Example:</h3><p>In a WPF application:</p>
+<ul>
+<li><strong>Model</strong>: Classes like <code>User</code> with properties (Name, Email).</li>
+<li><strong>View</strong>: XAML pages defining the UI.</li>
+<li><strong>ViewModel</strong>: C# class transforming Model data into View-friendly data, implements data binding.</li>
+</ul>
+<h2 id="Differences"><a href="#Differences" class="headerlink" title="Differences:"></a>Differences:</h2><ol>
+<li><strong>Data Binding</strong>: MVVM relies on data binding, while MVC often requires manual updating of the View.</li>
+<li><strong>Testability</strong>: MVVM enhances testability of UI logic, as ViewModel doesn’t need a View reference.</li>
+<li><strong>Use Case</strong>: MVC is used for web applications, MVVM for desktop&#x2F;mobile applications.</li>
+<li><strong>Complexity</strong>: MVVM can be more complex due to data-binding but leads to cleaner separation of GUI and business logic.</li>
+</ol>
 
     </div>
 
@@ -226,21 +233,18 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/spring/" rel="tag"># spring</a>
+              <a href="/tags/MVC-MVVM/" rel="tag"># MVC, MVVM</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/11/12/nodiscard/" rel="prev" title="nodiscard in C++">
-                  <i class="fa fa-angle-left"></i> nodiscard in C++
+                <a href="/2023/11/20/microsoftquery/" rel="prev" title="Using Microsoft Query in Excel">
+                  <i class="fa fa-angle-left"></i> Using Microsoft Query in Excel
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/11/20/microsoftquery/" rel="next" title="Using Microsoft Query in Excel">
-                  Using Microsoft Query in Excel <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
